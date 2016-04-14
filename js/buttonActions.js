@@ -37,14 +37,14 @@ function sort(e) {
 
 function toggleFolder(e) {
   if ($(e).hasClass('closedFolder')) {
-    $(e.parentNode.parentNode).find('.folderContent').removeClass('hide');
+    $(e.parentNode.parentNode).find('.folderContent').removeClass('hide').addClass('expandFolder');
     $(e).removeClass('closedFolder').addClass('openFolder');
     $(e).find('img').addClass('openFolderAnim').removeClass('removeFolderAnim');
   }
   // If folder is open
   else {
     $(e).addClass('closedFolder').removeClass('openFolder');
-    $(e.parentNode.parentNode).find('.folderContent').addClass('hide');
+    $(e.parentNode.parentNode).find('.folderContent').addClass('hide').removeClass('expandFolder');
     $(e).find('img').removeClass('openFolderAnim').addClass('removeFolderAnim');
   }
 }

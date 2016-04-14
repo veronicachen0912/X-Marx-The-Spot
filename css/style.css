@@ -42,7 +42,8 @@ a:hover {
 	position: absolute !important;
 	top: -9999px !important;
 	left: -9999px !important;
-
+	max-height: 0px !important;
+	transition: max-height 0.15s ease-out;
 }
 
 .show {
@@ -209,6 +210,15 @@ nav h1 {
 	font-size: 22px;
 	color: #4c4c4c;
 	vertical-align: top;
+}
+
+.expandFolder {
+	max-height: 100% !important;
+	-moz-transition: max-height 0.25s ease-in;
+	    -ms-transition: max-height 0.25s ease-in;
+	    -o-transition: max-height 0.25s ease-in;
+	    -webkit-transition: max-height 0.25s ease-in;
+	    transition: max-height 0.25s ease-in;
 }
 .openFolderAnim {
 	-webkit-animation: openFolderFrames .500s ease-in-out forwards;
