@@ -37,16 +37,14 @@ function sort(e) {
 
 function toggleFolder(e) {
   if ($(e).hasClass('closedFolder')) {
-    $(e).removeClass('closedFolder');
-    $(e).addClass('openFolder');
-    $(e).find( "img").attr("src","img/ic_keyboard_arrow_down_black_48dp_2x.png");
     $(e.parentNode.parentNode).find('.folderContent').removeClass('hide');
+    $(e).removeClass('closedFolder').addClass('openFolder');
+    $(e).find('img').addClass('openFolderAnim').removeClass('removeFolderAnim');
   }
   // If folder is open
   else {
-    $(e).addClass('closedFolder');
-    $(e).removeClass('openFolder');
-    $(e).find( "img").attr("src","img/ic_keyboard_arrow_up_black_48dp_2x.png");
+    $(e).addClass('closedFolder').removeClass('openFolder');
     $(e.parentNode.parentNode).find('.folderContent').addClass('hide');
+    $(e).find('img').removeClass('openFolderAnim').addClass('removeFolderAnim');
   }
 }
