@@ -232,6 +232,8 @@ nav h1 {
   padding: 0 16px;
   color: #FF1744;
 }
+.card__action-bar img {
+}
 .card__button:hover {
 }
 
@@ -537,6 +539,12 @@ h2 {
 @media screen and (max-width : 1280px){
 	.slide .column-40 {
 		width: 49%;
+	}
+}
+
+@media screen and (max-width : 1080px){
+	.slide .column-40 {
+		width: 60%;
 	}
 }
 
