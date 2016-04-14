@@ -42,8 +42,6 @@ a:hover {
 	position: absolute !important;
 	top: -9999px !important;
 	left: -9999px !important;
-	max-height: 0px !important;
-	transition: max-height 0.15s ease-out;
 }
 
 .show {
@@ -212,14 +210,6 @@ nav h1 {
 	vertical-align: top;
 }
 
-.expandFolder {
-	max-height: 100% !important;
-	-moz-transition: max-height 0.25s ease-in;
-	    -ms-transition: max-height 0.25s ease-in;
-	    -o-transition: max-height 0.25s ease-in;
-	    -webkit-transition: max-height 0.25s ease-in;
-	    transition: max-height 0.25s ease-in;
-}
 .openFolderAnim {
 	-webkit-animation: openFolderFrames .500s ease-in-out forwards;
    -moz-animation:    openFolderFrames .500s ease-in-out forwards;
@@ -232,6 +222,7 @@ nav h1 {
    -o-animation:      removeFolderFrames .500s forwards;
    animation:         removeFolderFrames .500s forwards;
 }
+
 @keyframes openFolderFrames{
   0% {
     transform: rotate(0deg) ;
