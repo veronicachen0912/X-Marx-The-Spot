@@ -1,0 +1,559 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+button, input {
+	outline:none;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+  box-sizing: border-box;
+}
+body {
+	height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hide {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+
+}
+
+.show {
+	display:block;
+}
+
+/* Navbar */
+nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	top: 0;
+	width: 100%;
+	height: 48px;
+	z-index: 9999;
+	background-color: black;
+	position: fixed;
+}
+nav ul {
+	padding: 8px;
+	list-style-type: none;
+	display: inline-block;
+}
+nav ul li {
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
+}
+.searchContainer input {
+	width: 33%;
+	padding: 8px;
+	margin: 0 auto;
+	font-size: 16px;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	position: absolute;
+	vertical-align: top;
+}
+
+nav ul li a {
+	font-size: 22px;
+	color: white;
+}
+nav button {
+	height: 32px;
+	vertical-align: top;
+	width: 32px;
+	z-index: 9999;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.searchContainer button img, nav button img {
+	height: 100%;
+}
+
+.dropdown-container {
+	position: relative;
+	z-index: 9999;
+	top: 0;
+	right: 0;
+	display: block;
+}
+.dropdown-content {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	-webkit-transform: translateZ(0);
+}
+
+.dropdown-content button {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+.dropdown-content button:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+nav h1 {
+	color: white;
+}
+.searchContainer {
+	display: inline-block;
+	text-align: center;
+	padding-top: 6px;
+	vertical-align: top;
+}
+
+.navbar-right {
+	float: right;
+}
+
+/* Bookmark */
+.bookmark {
+	width: 95%;
+	background-color: white;
+	height: 104px;
+	display: block !important;
+	position: relative;
+	padding: 16px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+
+.bookmark a {
+	width: 100%;
+	height: 100%;
+	display:block;
+}
+.bookmark .fab {
+	z-index: 9997;
+}
+
+.bookmark:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.folderContainer {
+	margin: 0 auto;
+	margin-bottom: 16px !important;
+	text-align: center;
+}
+.folder {
+	background-color: white;
+	height: 32px;
+	border-radius: 1px;
+	display: block !important;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+.folder button {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+.folder img {
+	height: 100%;
+	vertical-align: top;
+	float: right;
+}
+.folder h1 {
+	display: inline-block;
+	padding: 5px;
+	padding-left: 16px;
+	line-height: 22px;
+	font-size: 22px;
+	color: #4c4c4c;
+	vertical-align: top;
+}
+
+.card__action-bar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+	padding: 0 8px;
+  border-top: 1px solid #E0E0E0;
+  boz-sizing: border-box;
+  height: 32px;
+  -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__button {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  line-height: 32px;
+  padding: 0 16px;
+  color: #FF1744;
+}
+.card__button:hover {
+}
+
+button {
+  border: none;
+  background: transparent;
+	font-weight: 400;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button.right {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button.boxButton {
+	width: 100%;
+	height: 32px;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 16px;
+}
+.closeButton {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+.deleteConfirmationContainer {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+.deleteConfirmationContainer .confDelete {
+	display: inline-block;
+	width: 40px;
+	color: white;
+}
+
+.closeButton img{
+	width: 16px;
+	height: 16px;
+}
+
+.okayButton {
+	background-color: #4CAF50;
+}
+.deleteButton {
+	background-color: #F44336;
+}
+.cancelButton {
+	background-color: #FFA000;
+}
+button.boxButton:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button.fab {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	width: 54px;
+	height: 54px;
+	background-color: #03A9F4;
+	border-radius: 100%;
+	z-index: 9999;
+}
+
+img, button {
+	z-index: 9997;
+}
+
+.card__action-bar button.fab {
+	position: absolute;
+	right: 4px;
+	top: -20px;
+	background-color: #03A9F4;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.favorite {
+	background-color: #FFC107 !important;
+}
+button.fab img {
+	position: relative;
+	height: 50%;
+	width: 50%;
+	top: 2.5px;
+}
+
+button.fab:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.unexpandedcard {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+/* Ripple */
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+/* Form */
+.formcontainer {
+	background-color: white;
+	padding: 32px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	margin-top: 48px !important;
+}
+.formcontainer h1 {
+	text-align: center;
+	margin-bottom: 16px;
+}
+form {
+	margin: 0 auto;
+}
+
+.inputgroup {
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+}
+.inputgroup input {
+  font-size:18px;
+  display:block;
+  width:200px;
+  border:none;
+	margin-bottom: 20px;
+  border: none;
+  padding: 10px 0;
+  /*color: black;*/
+  border-bottom:1px solid #757575;
+}
+.inputgroup input:focus{
+  outline:none;
+}
+
+.inputgroup label {
+  margin: 0 !important;
+  color:black;
+  font-weight: 200;
+  font-size:16px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.inputgroup input:focus ~ label, .inputgroup input:valid ~ label 		{
+  top:-5px;
+  font-size:14px;
+  color:#ED2553;
+}
+
+.inputgroup .bar 	{
+  position:relative;
+  display:block;
+  width:100%;
+}
+
+.inputgroup .bar:before, .inputgroup .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:19px;
+  position:absolute;
+  background:#ED2553;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.inputgroup .bar:before {
+  left:50%;
+}
+.inputgroup .bar:after {
+  right:50%;
+}
+
+/* active state */
+.inputgroup input:focus ~ .bar:before, .inputgroup input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.inputgroup .highlight {
+  position:absolute;
+  height:100%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:1;
+}
+
+/* active state */
+.inputgroup input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+/* Column / Grid System*/
+
+.expandedcard {
+	height: 275px;
+	width: 100%;
+}
+
+.slide-container {
+  width: 100%;
+	margin-top: 48px;
+}
+
+.slide {
+  position: relative;
+	height: 100%;
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px 0;
+  display: block;
+}
+
+.slide .column-10 {
+	width: 10%;
+}
+.slide .column-20 {
+	width: 20%;
+}
+.slide .column-25 {
+	width: 24%;
+}
+
+.slide .column-33 {
+	width: 33%;
+}
+
+.slide .column-40 {
+	width: 39%;
+}
+
+.slide .column-50 {
+	width: 49%;
+}
+
+.slide .column-100 {
+	width: 100%;
+
+}
+[class*="column-"] {
+	display: block;
+	text-align: left;
+	vertical-align: top;
+	margin: 0 auto;
+}
+
+h1,h2,h3 {
+	font-weight:100;
+	color: black;
+}
+h1 {
+	color: #FF1744;
+	font-size: 22px;
+}
+h2 {
+	font-size: 16px;
+}
+
+@media screen and (max-width : 1280px){
+	.slide .column-40 {
+		width: 49%;
+	}
+}
+
+@media screen and (max-width : 680px){
+	.slide {
+		width: 80%;
+	}
+	.slide .column-40 {
+		width: 100%;
+	}
+	.nav-title {
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+	.searchContainer input {
+		margin: 0 0 0 8px;
+		width: 70%;
+	}
+}

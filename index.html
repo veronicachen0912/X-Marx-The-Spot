@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>BookMarx</title>
+  <meta name="description" content="The Home Page of BookMarx">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="imgs/tp.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/buttonActions.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-title">
+      <li><a href="index.html">Bookmarx</a></li>
+    </ul>
+    <div class="searchContainer">
+      <input type="text" placeholder="Search"></input>
+    </div>
+    <ul class="navbar-right">
+      <li><button onclick="window.location.replace('folder.html')"><img src="img/ic_create_new_folder_white_48dp_2x.png"></button></li>
+      <li><button onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button></li>
+    </ul>
+  </nav>
+
+  <div class="dropdown-container">
+    <div class="dropdown-content hide">
+      <button onclick="sort(this)">A-Z</button>
+      <button onclick="sort(this)">Favorites</button>
+    </div>
+  </div>
+
+  <div class="slide-container">
+    <div class="slide">
+      <div class="column-40 folderContainer">
+        <div class="folder">
+          <h1>Sites I Like</h1>
+          <button onclick="toggleFolder(this)" class="closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
+        </div>
+        <div class="folderContent hide">
+          <div class="bookmark">
+            <a href="https://www.facebook.com">
+              <h1>Casual Stalking Site</h1>
+              <h2>www.facebook.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+
+          <div class="bookmark">
+            <a href="https://www.linkedin.com">
+              <h1>Professional Stalking Site</h1>
+              <h2>www.linkedin.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+
+          <div class="bookmark">
+            <a href="https://www.apple.com">
+              <h1>Dat Apple Watch Doe</h1>
+              <h2>www.apple.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+
+          <div class="bookmark">
+            <a href="https://www.tinder.com">
+              <h1>Finding Romance</h1>
+              <h2>www.tinder.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+
+          <div class="bookmark">
+            <a href="https://www.getbootstrap.com">
+              <h1>Templates For Nubs</h1>
+              <h2>www.getbootstrap.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-40  folderContainer">
+        <div class="folder">
+          <h1>My Porn D:</h1>
+          <button onclick="toggleFolder(this)" class="closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
+        </div>
+        <div class="folderContent hide">
+          <div class="bookmark">
+            <a href="https://www.reddit.com">
+              <h1>Secret Stuff</h1>
+              <h2>www.reddit.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-40  folderContainer">
+        <div class="folder">
+          <h1>My Other Pornz</h1>
+          <button onclick="toggleFolder(this)" class="closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
+        </div>
+        <div class="folderContent hide">
+          <div class="bookmark">
+            <a href="https://www.reddit.com">
+              <h1>Secret Stuff</h1>
+              <h2>www.reddit.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-40  folderContainer">
+        <div class="folder">
+          <h1>My Other Pornz</h1>
+          <button onclick="toggleFolder(this)" class="closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
+        </div>
+        <div class="folderContent hide">
+          <div class="bookmark">
+            <a href="https://www.reddit.com">
+              <h1>Secret Stuff</h1>
+              <h2>www.reddit.com</h2>
+            </a>
+            <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+            <div class="deleteConfirmationContainer hide">
+              <label>Delete?</label>
+              <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+              <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+            </div>
+            <div class="card__action-bar">
+              <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+              <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <button class="fab" onclick="window.location.replace('add.html')"><img src="img/ic_add_white_48dp_2x.png"></button>
+</body>
+
+</html>
