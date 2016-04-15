@@ -157,6 +157,9 @@ nav h1 {
 	margin: 0 auto;
 	margin-bottom: 4px;
 }
+.noFolderBookmark{
+	width: 100% !important;		
+}
 
 .bookmark a {
 	width: 100%;

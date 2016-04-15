@@ -170,6 +170,24 @@
         </div>
       </div>
 
+      <div class="column-40">
+        <div class="bookmark noFolderBookmark">
+          <a href="https://www.facebook.com">
+            <h1>Secret Site</h1>
+            <h2>www.reddit.com</h2>
+          </a>
+          <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
+          <div class="deleteConfirmationContainer hide">
+            <label>Delete?</label>
+            <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
+            <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
+          </div>
+          <div class="card__action-bar">
+            <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
+            <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 
