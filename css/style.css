@@ -188,15 +188,24 @@ nav h1 {
 	margin: 0 auto;
 	margin-bottom: 4px;
 }
-.folder button {
+.folder button.folderToggle {
 	display: inline-block;
 	height: 100%;
-	width: 100%;
+	width: 95%;
 	position: absolute;
 	left: 0;
 }
-.folder img {
+.folder button {
 	height: 100%;
+	float: right;
+}
+.folder button img {
+	height: 80%;
+	vertical-align: middle;
+}
+
+.folder button.folderToggle img  {
+	height: 100% !important;
 	vertical-align: top;
 	float: right;
 }
@@ -210,17 +219,23 @@ nav h1 {
 	vertical-align: top;
 }
 
+.folderContent ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
 .openFolderAnim {
-	-webkit-animation: openFolderFrames .500s ease-in-out forwards;
-   -moz-animation:    openFolderFrames .500s ease-in-out forwards;
-   -o-animation:      openFolderFrames .500s ease-in-out forwards;
-   animation:         openFolderFrames .500s ease-in-out forwards;
+	-webkit-animation: openFolderFrames .350s ease-in-out forwards;
+   -moz-animation:    openFolderFrames .350s ease-in-out forwards;
+   -o-animation:      openFolderFrames .350s ease-in-out forwards;
+   animation:         openFolderFrames .350s ease-in-out forwards;
 }
 .removeFolderAnim {
-	-webkit-animation: removeFolderFrames .500s forwards;
-   -moz-animation:    removeFolderFrames .500s forwards;
-   -o-animation:      removeFolderFrames .500s forwards;
-   animation:         removeFolderFrames .500s forwards;
+	-webkit-animation: removeFolderFrames .350s forwards;
+   -moz-animation:    removeFolderFrames .350s forwards;
+   -o-animation:      removeFolderFrames .350s forwards;
+   animation:         removeFolderFrames .350s forwards;
 }
 
 @keyframes openFolderFrames{
@@ -306,6 +321,10 @@ button.boxButton {
 	color: white;
 }
 
+.deleteConfirmationContainer .confDelete:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 .closeButton img{
 	width: 16px;
 	height: 16px;
@@ -330,10 +349,98 @@ button.fab {
 	right: 16px;
 	width: 54px;
 	height: 54px;
-	background-color: #03A9F4;
+	background-color: #FF1744;
 	border-radius: 100%;
 	box-shadow:0 1px 2px #aaa;
 	z-index: 9999;
+}
+.mini-fab-container {
+	position: fixed;
+	bottom: 24px;
+	right: 26px;
+	width: 32px;
+	height: 128px;
+	z-index: 9999;
+}
+button.mini-fab {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	background-color: #FF1744;
+	border-radius: 100%;
+	box-shadow:0 1px 2px #aaa;
+	z-index: 9999;
+	display: block;
+	margin-bottom: 8px;
+}
+button.mini-fab:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+button.mini-fab img {
+	position: relative;
+	height: 75%;
+	top: 2.5px;
+}
+.rotateFab {
+	-webkit-animation: rotateFabButton .200s ease-in-out forwards;
+   -moz-animation:    rotateFabButton .200s ease-in-out forwards;
+   -o-animation:      rotateFabButton .200s ease-in-out forwards;
+   animation:         rotateFabButton .200s ease-in-out forwards;
+}
+.unRotateFab {
+	-webkit-animation: unRotateFabButton .200s ease-in-out forwards;
+   -moz-animation:    unRotateFabButton .200s ease-in-out forwards;
+   -o-animation:      unRotateFabButton .200s ease-in-out forwards;
+   animation:         unRotateFabButton .200s ease-in-out forwards;
+}
+.rollin {
+	-webkit-animation: rollIn .350s ease-in-out forwards;
+   -moz-animation:    rollIn .350s ease-in-out forwards;
+   -o-animation:      rollIn .350s ease-in-out forwards;
+   animation:         rollIn .350s ease-in-out forwards;
+}
+.rollout {
+	-webkit-animation: rollOut .350s ease-in-out forwards;
+   -moz-animation:    rollOut .350s ease-in-out forwards;
+   -o-animation:      rollOut .350s ease-in-out forwards;
+   animation:         rollOut .350s ease-in-out forwards;
+}
+/* Keyframes for mini fab animations */
+@keyframes rotateFabButton{
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(45deg) ;
+  }
+}
+@keyframes unRotateFabButton{
+  0% {
+    transform: rotate(45deg) ;
+  }
+  100% {
+    transform: rotate(0deg) ;
+  }
+}
+@keyframes rollIn {
+   0% { opacity: 0; transform: translateX(100%) rotate(120deg); }
+   100% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+}
+@keyframes rollOut {
+   0% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+   100% { opacity: 0; transform: translateX(100%) rotate(120deg); }
+}
+
+/* Overlay */
+.overlay {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgba(229,229,229,.5);
 }
 
 img, button {
@@ -344,7 +451,7 @@ img, button {
 	position: absolute;
 	right: 4px;
 	top: -20px;
-	background-color: #03A9F4;
+	background-color: #727272;
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
@@ -402,6 +509,12 @@ form {
 }
 
 .inputgroup {
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+}
+.labelgroup {
 	width: 200px;
   position:relative;
 	margin: 0 auto;

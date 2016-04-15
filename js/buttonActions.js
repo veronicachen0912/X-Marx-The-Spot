@@ -60,3 +60,22 @@ function expandFolder(e) {
         }, 200);
     }
 }
+
+function expandFabOverlay() {
+  if ($('.overlayContainer').find('.fab').hasClass('rotateFab')) {
+    $('.overlayContainer').find('.fab').removeClass('rotateFab').addClass('unRotateFab');
+    $('.mini-fab-container').children().each(function(index, element) {
+      $(this).removeClass('rollin').addClass('rollout');
+    });
+    $('.overlay').addClass('hide');
+  }
+  // Show Overlay
+  else {
+    $('.overlayContainer').find('.fab').addClass('rotateFab').removeClass('unRotateFab');
+    $('.mini-fab-container').removeClass('hide');
+    $('.mini-fab-container').children().each(function(index, element) {
+      $(this).removeClass('rollout').addClass('rollin');
+    });
+    $('.overlay').removeClass('hide');
+  }
+}
