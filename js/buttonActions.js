@@ -85,3 +85,15 @@ function closeOverlay () {
       expandFabOverlay();
   }
 }
+
+function deleteFolder() {
+  $('.deleteContainer').removeClass('hide');
+  $('.actionContainer').addClass('hide');
+  $('.deleteConf').removeClass('hide');
+}
+
+function cancelDeleteFolder() {
+  $('.deleteContainer').addClass('hide');
+  $('.actionContainer').removeClass('hide');
+  $('.deleteConf').addClass('hide');
+}

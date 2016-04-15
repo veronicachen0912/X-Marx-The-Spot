@@ -29,10 +29,17 @@
           <span class="bar"></span>
           <label>Title</label>
         </div>
-        <div class="inputgroup">
+        <div class="labelgroup deleteConf hide">
+          <label>Delete the Folder and BookMarx inside?</label>
+        </div>
+        <div class="inputgroup deleteContainer hide">
+          <button type='button' class="boxButton deleteButton" onclick="window.location.replace('index.html')">Delete</button>
+          <button type='button' class="boxButton cancelButton" onclick="cancelDeleteFolder()">Cancel</button>
+        </div>
+        <div class="inputgroup actionContainer">
           <button type='button' class="boxButton okayButton" onclick="window.location.replace('index.html')">Save</button>
           <button type='button' class="boxButton cancelButton" onclick="window.location.replace('index.html')">Cancel</button>
-          <button type='button' class="boxButton deleteButton" onclick="window.location.replace('index.html')">Delete</button>
+          <button type='button' class="boxButton deleteButton" onclick="deleteFolder()">Delete</button>
         </div>
       </form>
     </div>

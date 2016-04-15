@@ -522,6 +522,11 @@ form {
 	margin: 0 auto;
   margin-bottom:16px;
 }
+
+.deleteConf {
+	color: red;
+	text-align: center;
+}
 .inputgroup input {
   font-size:18px;
   display:block;
