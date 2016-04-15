@@ -5,20 +5,29 @@ function toggleFavorite(e) {
     $(e).addClass('favorite');
 }
 
-function editBookMarx(e) {
-
+function toggleNotifications() {
+  if ($('.notification-tray').hasClass('hide')) {
+    $('.notification-tray').removeClass('hide');
+    $('.dropdown-content').addClass('hide');
+  }
+  else {
+    $('.notification-tray').addClass('hide');
+  }
 }
 
+/* Prompts User to Deletes a BookMarx Folder*/
 function showDeleteConf(e) {
   var parentContainer = e.parentNode;
   $(e).addClass('hide');
   $(parentContainer).find( ".deleteConfirmationContainer").removeClass('hide');
 }
+
 function cancelDelete(e) {
   var parentContainer = e.parentNode.parentNode;
   $(parentContainer).find( ".closeButton").removeClass('hide');
   $(parentContainer).find( ".deleteConfirmationContainer").addClass('hide');
 }
+
 /* Deletes a BookMarx*/
 function confDelete(e) {
   var bookmarx = e.parentNode.parentNode.parentNode;
@@ -31,14 +40,17 @@ function confDelete(e) {
 
 }
 
+/* Toggles the filer */
 function toggleSort() {
   if ($('.dropdown-content').hasClass('hide')) {
     $('.dropdown-content').removeClass('hide');
+    $('.notification-tray').addClass('hide');
   }
   else {
     $('.dropdown-content').addClass('hide');
   }
 }
+
 function sort(e) {
   toggleSort();
 }

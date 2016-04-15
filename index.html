@@ -24,6 +24,7 @@
     </div>
     <ul class="navbar-right">
       <li><button onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button></li>
+      <li><button onclick="toggleNotifications()"><img src="img/ic_announcement_white_48dp_2x.png"></button></li>
     </ul>
   </nav>
 
@@ -33,6 +34,23 @@
       <button onclick="sort(this)">Z-A</button>
       <button onclick="sort(this)">Favorites</button>
       <button onclick="sort(this)">Frequency</button>
+    </div>
+  </div>
+
+  <div class="notification-tray hide">
+    <div class="notification-card">
+      <h1>Such Sexy is broken</h1>
+      <div class="card__action-bar">
+        <button class="card__button" onclick="window.location.replace('index.html')">FIX</button>
+        <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
+      </div>
+    </div>
+    <div class="notification-card">
+      <h1>Thomas Powell sent you a shared folder</h1>
+      <div class="card__action-bar">
+        <button class="card__button" onclick="window.location.replace('index.html')">SAVE</button>
+        <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
+      </div>
     </div>
   </div>
 
@@ -178,7 +196,7 @@
 
   <div class="overlayContainer">
     <div class="mini-fab-container hide">
-      <button class="mini-fab" onclick="window.location.replace('add.html')"><img src="img/ic_add_white_48dp_2x.png"></button>
+      <button class="mini-fab" onclick="window.location.replace('add.html')"><img src="img/ic_bookmark_white_48dp_2x.png"></button>
       <button class="mini-fab" onclick="window.location.replace('folder.html')"><img src="img/ic_create_new_folder_white_48dp_2x.png"></button>
       <!--button class="mini-fab" onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button-->
     </div>

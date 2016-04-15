@@ -89,13 +89,44 @@ nav ul li a {
 nav button {
 	height: 32px;
 	vertical-align: top;
-	width: 32px;
+	width: 48px;
 	z-index: 9999;
 	margin-left: 8px;
 	margin-right: 8px;
 }
 .searchContainer button img, nav button img {
 	height: 100%;
+}
+
+	.notification-tray {
+	height: 400px;
+	width: 280px;
+	position: absolute;;
+	z-index: 9998;
+	top: 48px;
+	right: 0;
+	display: block;
+	background-color: rgba(0,0,0,.8);
+}
+
+.notification-card {
+	position: relative;
+	width: 95%;
+	height: 92px;
+	margin: 0 auto;
+	margin-top: 8px;
+	padding: 8px;
+	background-color: white;
+}
+
+.notification-card  h1 {
+	font-size: 18px;
+}
+
+.notification-card .card__action-bar .card__button {
+  line-height: 32px;
+  padding: 0 8px;
+  color: #FF1744;
 }
 
 .dropdown-container {
@@ -108,7 +139,7 @@ nav button {
 .dropdown-content {
 	position: fixed;
 	right: 0;
-	top: 0;
+	top: 48px;
 	z-index: 9999;
 	background-color: #f9f9f9;
 	min-width: 160px;
@@ -194,7 +225,7 @@ nav h1 {
 .folder button.folderToggle {
 	display: inline-block;
 	height: 100%;
-	width: 95%;
+	width: 92%;
 	position: absolute;
 	left: 0;
 }
