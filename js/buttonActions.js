@@ -19,10 +19,18 @@ function cancelDelete(e) {
   $(parentContainer).find( ".closeButton").removeClass('hide');
   $(parentContainer).find( ".deleteConfirmationContainer").addClass('hide');
 }
+/* Deletes a BookMarx*/
 function confDelete(e) {
-  var parentContainer = e.parentNode.parentNode;
-  $(parentContainer).remove();
+  var bookmarx = e.parentNode.parentNode.parentNode;
+  var parentContainer = bookmarx.parentNode.parentNode;
+  var elementHeight = $(bookmarx).height();
+
+  $(bookmarx).remove();
+  var newheight = $(parentContainer).height()-elementHeight;
+  $(parentContainer).css('height', newheight +'px');
+
 }
+
 function toggleSort() {
   if ($('.dropdown-content').hasClass('hide')) {
     $('.dropdown-content').removeClass('hide');
