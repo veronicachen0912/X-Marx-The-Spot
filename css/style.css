@@ -101,12 +101,18 @@ nav button {
 	.notification-tray {
 	height: 400px;
 	width: 280px;
-	position: absolute;;
+	position: fixed;
 	z-index: 9998;
 	top: 48px;
 	right: 0;
 	display: block;
 	background-color: rgba(0,0,0,.8);
+}
+
+.notification-tray ul{
+	height:392px; width:100%;
+	overflow:hidden;
+	overflow-y:scroll;
 }
 
 .notification-card {
