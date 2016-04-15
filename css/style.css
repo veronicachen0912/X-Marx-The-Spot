@@ -442,7 +442,9 @@ button.mini-fab img {
 	z-index: 9999;
 	background-color: rgba(229,229,229,.5);
 }
-
+.overlay:hover {
+	cursor: pointer;
+}
 img, button {
 	z-index: 9997;
 }

@@ -79,3 +79,9 @@ function expandFabOverlay() {
     $('.overlay').removeClass('hide');
   }
 }
+
+function closeOverlay () {
+  if (! ($('.overlay').hasClass('hide')) ) {
+      expandFabOverlay();
+  }
+}
